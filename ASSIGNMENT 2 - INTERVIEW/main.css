@@ -1,0 +1,491 @@
+.rectangle-1 {
+    background: #263fff;
+    width: 1920px;
+    height: 1024px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.conversations-with-calista1 {
+    color: #8affce;
+    text-align: left;
+    font-family: 'InclusiveSans-Regular', sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.06em;
+    font-weight: 400;
+    position: absolute;
+    left: 60px;
+    top: 29px;
+    width: 304px;
+}
+
+.from-the-perspectives-of-chinese-indonesians1 {
+    color: #8affce;
+    text-align: left;
+    font-family: 'InclusiveSans-Regular', sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.06em;
+    font-weight: 400;
+    position: absolute;
+    left: 1000px;
+    top: 29px;
+}
+
+.please-describe-what-feels-like-home-to-you {
+    text-align: left;
+    font-family: 'FunnelDisplay-Regular', sans-serif;
+    font-size: 120px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 40px;
+    top: 200px;
+    width: 1354px;
+    height: 637px;
+}
+
+.please-describe-what-feels-like-home-to-you-span {
+    color: #ffffff;
+}
+
+.please-describe-what-feels-like-home-to-you-span2 {
+    color: #daff33;
+}
+
+.vector-1 {
+    width: 314px;
+    height: 22px;
+    position: absolute;
+    left: 40px;
+    top: 550px;
+    overflow: visible;
+}
+
+/* People Page */
+
+.rectangle-1 {
+    width: 1938px;
+    height: 1101px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+.hear-from-kathy {
+    text-align: left;
+    font-family: 'FunnelDisplay-Regular', sans-serif;
+    font-size: 120px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 60px;
+    top: 200px;
+    width: 862px;
+}
+
+.hear-from-kathy-span {
+    color: #ffffff;
+}
+
+.hear-from-kathy-span2 {
+    color: #8d006f;
+}
+
+.hear-from-brandon {
+    text-align: left;
+    font-family: 'FunnelDisplay-Regular', sans-serif;
+    font-size: 120px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 60px;
+    top: 350px;
+    width: 1034px;
+}
+
+.hear-from-brandon-span {
+    color: #ffffff;
+}
+
+.hear-from-brandon-span2 {
+    color: #b50000;
+}
+
+.conversations-with-calista2 {
+    color: #02005f;
+    text-align: left;
+    font-family: 'InclusiveSans-Regular', sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.06em;
+    font-weight: 400;
+    position: absolute;
+    left: 60px;
+    top: 29px;
+    width: 304px;
+}
+
+.from-the-perspectives-of-chinese-indonesians2 {
+    color: #02005f;
+    text-align: left;
+    font-family: 'InclusiveSans-Regular', sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.06em;
+    font-weight: 400;
+    position: absolute;
+    left: 1000px;
+    top: 29px;
+}
+
+/* kathy interview */
+
+
+.kathybg {
+    background: #E6D3FF;
+    height: 2781px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rectangle-2 {
+    width: 1920px;
+    height: 2781px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+.conversations-with-calista3 {
+    color: #4a0d5f;
+    text-align: left;
+    font-family: 'InclusiveSans-Regular', sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.06em;
+    font-weight: 400;
+    position: absolute;
+    left: 89px;
+    top: 29px;
+    width: 304px;
+}
+
+.from-the-perspectives-of-chinese-indonesians3 {
+    color: #4a0d5f;
+    text-align: left;
+    font-family: 'InclusiveSans-Regular', sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.06em;
+    font-weight: 400;
+    position: absolute;
+    left: 1000px;
+    top: 29px;
+}
+
+.group-2 {
+    position: absolute;
+    inset: 0;
+}
+
+.rectangle-3 {
+    background: #4a0d5f;
+    width: 307px;
+    height: 82px;
+    position: absolute;
+    left: 500px;
+    top: 285px;
+}
+
+.please-describe-what-feels-like-home-to-you2 {
+    text-align: center;
+    font-family: 'FacultyGlyphic-Regular', sans-serif;
+    font-size: 120px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 80px;
+    top: 135px;
+    width: 1354px;
+}
+
+.please-describe-what-feels-like-home-to-you-span3 {
+    color: #4f0071;
+}
+
+.please-describe-what-feels-like-home-to-you-span4 {
+    color: #f143f7;
+}
+
+.kathy {
+    width: 318px;
+    height: 317px;
+    position: absolute;
+    left: 150px;
+    top: 472px;
+    object-fit: cover;
+    aspect-ratio: 318/317;
+}
+
+.rectangle-4 {
+    background: #ff9bf2;
+    width: 54px;
+    height: 128px;
+    position: absolute;
+    left: 205px;
+    top: 1003px;
+}
+
+.k-h {
+    color: #4f0071;
+    text-align: center;
+    font-family: 'FacultyGlyphic-Regular', sans-serif;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 197px;
+    top: 503px;
+}
+
+.textbox1 {
+    color: #4f0071;
+    text-align: right;
+    font-family: 'FunnelDisplay-Regular', sans-serif;
+    font-size: 30px;
+    line-height: 96%;
+    letter-spacing: -0.06em;
+    font-weight: 400;
+    position: absolute;
+    left: 107px;
+    top: 424px;
+    width: 1300px;
+}
+
+.textbox2 {
+    color: #4f0071;
+    text-align: left;
+    font-family: 'FunnelDisplay-Regular', sans-serif;
+    font-size: 30px;
+    line-height: 96%;
+    letter-spacing: -0.06em;
+    font-weight: 400;
+    position: absolute;
+    left: 127px;
+    top: 1000px;
+    width: 1006px;
+}
+
+/* Brandon Page */
+
+.brandon,
+.brandon * {
+    box-sizing: border-box;
+}
+
+.brandon {
+    background: #b50000;
+    height: 4471px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rectangle-2 {
+    width: 1920px;
+    height: 4471px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+.conversations-with-calista4 {
+    color: #ff9bf2;
+    text-align: left;
+    font-family: 'InclusiveSans-Regular', sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.06em;
+    font-weight: 400;
+    position: absolute;
+    left: 40px;
+    top: 29px;
+    width: 304px;
+}
+
+.from-the-perspectives-of-chinese-indonesians4 {
+    color: #ff9bf2;
+    text-align: left;
+    font-family: 'InclusiveSans-Regular', sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.06em;
+    font-weight: 400;
+    position: absolute;
+    left: 926px;
+    top: 29px;
+}
+
+.group-1 {
+    position: absolute;
+    inset: 0;
+}
+
+.rectangle-3 {
+    background: #cc003d;
+    width: 307px;
+    height: 82px;
+    position: absolute;
+    left: 500px;
+    top: 280px;
+}
+
+.group-2 {
+    width: 1354px;
+    height: 360px;
+    position: static;
+}
+
+.please-describe-what-feels-like-home-to-you3 {
+    text-align: center;
+    font-family: 'FragmentMono-Regular', sans-serif;
+    font-size: 120px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 100px;
+    top: 118px;
+    width: 1354px;
+}
+
+.please-describe-what-feels-like-home-to-you-span5 {
+    color: #ffffff;
+}
+
+.please-describe-what-feels-like-home-to-you-span6 {
+    color: #ffa4a7;
+}
+
+.bchupic {
+    width: 304px;
+    height: 228px;
+    position: absolute;
+    left: 201px;
+    top: 400px;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
+
+.rectangle-4 {
+    background: #ffcacb;
+    width: 80px;
+    height: 128px;
+    position: absolute;
+    left: 190px;
+    top: 430px;
+}
+
+.b-c {
+    color: #860004;
+    text-align: center;
+    font-family: 'FragmentMono-Regular', sans-serif;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 206px;
+    top: 430px;
+}
+
+.bctext1 {
+    color: #ffffff;
+    text-align: justified;
+    font-family: 'FunnelDisplay-Regular', sans-serif;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 100px;
+    top: 722px;
+    width: 652px;
+    height: 1101px;
+}
+
+.bctext2 {
+    color: #ffffff;
+    text-align: justified;
+    font-family: 'FunnelDisplay-Regular', sans-serif;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 100px;
+    top: 1600px;
+    width: 652px;
+    height: 1101px;
+}
+
+.bctext3 {
+    color: #ffffff;
+    text-align: justified;
+    font-family: 'FunnelDisplay-Regular', sans-serif;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 800px;
+    top: 680px;
+    width: 696px;
+    height: 1101px;
+}
+
+.bctext4 {
+    color: #ffffff;
+    text-align: justified;
+    font-family: 'FunnelDisplay-Regular', sans-serif;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 800px;
+    top: 1200px;
+    width: 696px;
+    height: 1101px;
+}
+
+.bctext5 {
+    color: #ffffff;
+    text-align: justified;
+    font-family: 'FunnelDisplay-Regular', sans-serif;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 800px;
+    top: 1600px;
+    width: 696px;
+    height: 1101px;
+}
+
+.bctext6 {
+    color: #ffffff;
+    text-align: justified;
+    font-family: 'FunnelDisplay-Regular', sans-serif;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    font-weight: 400;
+    position: absolute;
+    left: 100px;
+    top: 1100px;
+    width: 652px;
+}
