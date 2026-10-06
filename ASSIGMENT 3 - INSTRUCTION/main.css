@@ -1,0 +1,598 @@
+@font-face {
+    font-family: 'DartsFont';
+    src: local('DartsFont'), url('dartsfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #000000;
+}
+
+/* STANDARDIZED TITLE AND DESC */
+
+.home,
+.homepage {
+    position: relative;
+    min-height: 100vh;
+}
+
+.home {
+    overflow: hidden;
+}
+
+.homepage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.titledesc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: calc(50vw - 33px - 24px);
+    position: absolute;
+    left: 33px;
+    top: 26px;
+    bottom: 40px;
+}
+
+.title {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'DartsFont', sans-serif;
+    font-size: 150px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+    transform-origin: 0 0;
+    transform: rotate(0.336deg) scale(1, 1);
+}
+
+.title a,
+.title a:visited {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.15s ease;
+}
+
+.title a:hover {
+    transform: translateY(-10px);
+}
+
+.description {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Syne Mono", monospace;
+    font-size: clamp(18px, 2vw, 33px);
+    line-height: 113.69%;
+    font-weight: 400;
+    position: absolute;
+    transform-origin: 0 0;
+    bottom: 0;
+}
+
+/* BUTTONS - INSTR AND OTHR WKRS */
+
+._01,
+._02,
+.instructions,
+.other-works {
+    color: #000000;
+    text-align: left;
+    font-family: "Syne", sans-serif;
+    letter-spacing: -0.07em;
+    position: relative;
+    white-space: nowrap;
+    font-size: clamp(32px, min(8vh, 4.5vw), 82px);
+}
+
+._01,
+._02 {
+    font-weight: 400;
+}
+
+.instructions,
+.other-works {
+    font-weight: 500;
+    margin-left: 0.25em;
+}
+
+.other-works {
+    letter-spacing: -0.12em;
+}
+
+/* RECTANGLES */
+
+.box-1 {
+    position: relative;
+    width: 100%;
+    height: clamp(110px, 18vh, 215px);
+    flex-shrink: 0;
+}
+
+a.box-1,
+a.box-1:visited {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+a.frame-2,
+a.frame-2:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.box-1,
+a.frame-2 {
+    transition: transform 0.15s ease;
+}
+
+a.box-1:hover,
+a.frame-2:hover {
+    transform: translateY(-4px);
+}
+
+.rectangle-instr {
+    background: #c8ff53;
+    border-radius: 35px;
+    border: 3px solid #000000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.frame-instr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 93.03%;
+    height: 50%;
+    position: absolute;
+    left: 4.79%;
+    top: 24.75%;
+}
+
+.frame-2 {
+    position: relative;
+    background: #65faed;
+    border-radius: 35px;
+    border: 3px solid #000000;
+    width: 100%;
+    height: clamp(110px, 18vh, 215px);
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.box-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/* HOEMEE PAGEEE*/
+
+.frame-1 {
+    position: absolute;
+    right: 2%;
+    bottom: 40px;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pics {
+    position: absolute;
+    right: 2%;
+    width: 48%;
+    top: 24px;
+    bottom: calc(40px + 2 * clamp(110px, 18vh, 215px) + 32px + 24px);
+}
+
+.kathypic1,
+.biancapic1,
+.calistapic1 {
+    position: absolute;
+    object-fit: cover;
+}
+
+.kathypic1 {
+    left: 16%;
+    top: 8%;
+    height: 92%;
+    aspect-ratio: 350 / 453;
+}
+
+.biancapic1 {
+    left: 30%;
+    top: 0;
+    height: 100%;
+    aspect-ratio: 364 / 471;
+}
+
+.calistapic1 {
+    left: 44%;
+    top: 10%;
+    height: 95%;
+    aspect-ratio: 330 / 450;
+}
+
+/*  HOVER */
+.pics img,
+.works-box img {
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+        box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+.pics img:hover,
+.works-box img:hover {
+    transform: translateY(-28px);
+    z-index: 10;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* INSTRPG */
+
+.right-col {
+    grid-column: 2;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 24px 2% 40px 0;
+}
+
+.instr-box {
+    background: #c8ff53;
+    border: 3px solid #000000;
+    border-radius: 35px;
+    padding: 32px 32px 40px;
+}
+
+.instr-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.break {
+    color: #000000;
+    font-family: "Syne", sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin: 8px 0 24px;
+}
+
+.actualinstr {
+    color: #000000;
+    font-family: "Syne", sans-serif;
+    font-size: clamp(16px, 1.7vw, 24px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0;
+    padding-left: 1.6em;
+}
+
+.actualinstr li {
+    margin-bottom: 0.35em;
+}
+
+.right-col .frame-2 {
+    margin-top: auto;
+}
+
+/* OTHR WRKS */
+
+.works-box {
+    position: relative;
+    flex: 1;
+    min-height: 420px;
+    background: #65faed;
+    border: 3px solid #000000;
+    border-radius: 35px;
+    container-type: size;
+}
+
+.works-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 16%;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.right-col a,
+.right-col a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.kathy2,
+.bianca2,
+.calista2 {
+    position: absolute;
+    object-fit: cover;
+}
+
+.kathy2 {
+    left: 7%;
+    top: 15.4%;
+    height: 46.3%;
+    aspect-ratio: 272 / 352;
+}
+
+.bianca2 {
+    left: 52.7%;
+    top: 24.4%;
+    height: 51.2%;
+    aspect-ratio: 301 / 390;
+}
+
+.calista2 {
+    left: 10%;
+    top: 33.5%;
+    height: 60.7%;
+    aspect-ratio: 357 / 462;
+}
+
+/* cALISTAS PAGES*/
+
+.poster-img {
+    position: absolute;
+    left: 4.9%;
+    top: 16.3%;
+    height: 47.4%;
+    aspect-ratio: 279 / 361;
+    object-fit: cover;
+}
+
+.fullname,
+.poster-major,
+.poster-desc {
+    position: absolute;
+    margin: 0;
+    color: #c8ff53;
+    font-family: "Syne", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 1.15;
+    -webkit-text-stroke: 3px #364bff;
+    paint-order: stroke fill;
+}
+
+.fullname {
+    left: 50.8%;
+    top: 17.9%;
+    font-size: min(7cqw, 6.3cqh);
+    letter-spacing: -0.1em;
+    -webkit-text-stroke-width: 1.2cqw;
+    white-space: nowrap;
+}
+
+.poster-major {
+    left: 7%;
+    top: 85.5%;
+    font-size: min(3.5cqw, 3.15cqh);
+}
+
+.poster-desc {
+    left: 51.4%;
+    font-family: "SyneMono", monospace;
+    top: 27%;
+    width: 43%;
+    font-size: 16px;
+    -webkit-text-stroke-width: 5px;
+}
+
+/*KATHYS PAGE */
+
+.kathy-img,
+.forcalista-1 {
+    position: absolute;
+    left: 4.35%;
+    top: 15.5%;
+    height: 49.1%;
+    aspect-ratio: 289 / 374;
+    object-fit: cover;
+}
+
+.kathyname,
+.kathymajor,
+.kathy-desc {
+    position: absolute;
+    margin: 0;
+    color: #e9c7ff;
+    font-family: "Syne", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.1em;
+    line-height: 1.16;
+    -webkit-text-stroke: 3px #540951;
+    paint-order: stroke fill;
+}
+
+.kathyname {
+    left: 50.1%;
+    top: 16.3%;
+    font-size: 32px;
+    -webkit-text-stroke-width: 1.1cqw;
+    white-space: nowrap;
+}
+
+.kathymajor {
+    left: 5.2%;
+    top: 85.2%;
+    font-size: 20px;
+}
+
+.kathy-desc {
+    left: 48.6%;
+    font-family: "SyneMono", monospace;
+    top: 30.9%;
+    width: 47.6%;
+    font-size: 16px;
+    line-height: 1.1275;
+    -webkit-text-stroke: 5px #540951;
+}
+
+/* BI PAGE*/
+
+.bianca-title,
+.biancamajor,
+.bianca-description {
+    position: absolute;
+    margin: 0;
+    color: #ffa4ed;
+    font-family: "Syne", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.1em;
+    line-height: 1.16;
+    -webkit-text-stroke: 5px #4063d8;
+    paint-order: stroke fill;
+}
+
+.bianca-title {
+    left: 50.1%;
+    top: 16.3%;
+    font-size: 32px;
+    -webkit-text-stroke-width: 1.1cqw;
+    white-space: nowrap;
+}
+
+.biancamajor {
+    left: 5.7%;
+    top: 86.3%;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.bianca-description {
+    font-family: "SyneMono", monospace;
+    left: 48.5%;
+    top: 25.4%;
+    width: 46.3%;
+    font-size: 14px;
+    line-height: 1.1275;
+    -webkit-text-stroke-width: 4px;
+}
+
+.bianca3 {
+    position: absolute;
+    left: 4.8%;
+    top: 18.1%;
+    height: 46.9%;
+    aspect-ratio: 276 / 357;
+    object-fit: cover;
+}
+
+/* HOVERRRR */
+
+@keyframes slide-up {
+    from {
+        transform: translateY(40vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes reveal {
+    from {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.instr-box,
+.works-box {
+    animation: slide-up 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.actualinstr li {
+    animation: reveal 0.4s ease both;
+}
+
+.actualinstr li:nth-child(1) {
+    animation-delay: 0.8s;
+}
+
+.actualinstr li:nth-child(2) {
+    animation-delay: 0.95s;
+}
+
+.actualinstr li:nth-child(3) {
+    animation-delay: 1.1s;
+}
+
+.actualinstr li:nth-child(4) {
+    animation-delay: 1.25s;
+}
+
+.actualinstr li:nth-child(5) {
+    animation-delay: 1.4s;
+}
+
+.actualinstr li:nth-child(6) {
+    animation-delay: 1.55s;
+}
+
+.actualinstr li:nth-child(7) {
+    animation-delay: 1.7s;
+}
+
+.actualinstr li:nth-child(8) {
+    animation-delay: 1.85s;
+}
+
+.actualinstr li:nth-child(9) {
+    animation-delay: 2s;
+}
+
+.right-col .frame-2 {
+    animation: reveal 0.4s ease 2.2s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .instr-box,
+    .works-box,
+    .actualinstr li,
+    .right-col .frame-2,
+    .pics img,
+    .works-box img {
+        animation: none;
+        transition: none;
+    }
+}
