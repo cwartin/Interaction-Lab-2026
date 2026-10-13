@@ -1,0 +1,176 @@
+body {
+    margin-left: 40 px;
+    background: rgb(212, 255, 0);
+    color: rgb(50, 50, 255);
+    font-family: "ta-rb", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+svg {
+    position: absolute;
+}
+
+p {
+    position: relative;
+    margin: 0;
+    padding: 0 2vw;
+    font-size: 10.5vw;
+    font-weight: bold;
+    line-height: 1.1;
+    white-space: nowrap;
+    text-align-last: justify;
+    transition: transform 0.3s;
+    cursor: crosshair;
+}
+
+.chaos1 {
+    filter: url(#chaos1);
+}
+
+.chaos2 {
+    filter: url(#chaos2);
+}
+
+.chaos3 {
+    filter: url(#chaos3);
+}
+
+.chaos4 {
+    filter: url(#chaos4);
+}
+
+.chaos5 {
+    filter: url(#chaos5);
+}
+
+.chaos6 {
+    filter: url(#chaos6);
+}
+
+
+
+.crazy {
+    position: relative;
+}
+
+.crazy::before,
+.crazy::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(transparent, black 60vw);
+    mask-image: linear-gradient(transparent, black 60vw);
+}
+
+.crazy::before {
+    background-image:
+        repeating-linear-gradient(rgb(82, 255, 186) 0 1px, transparent 1px 9vw),
+        repeating-linear-gradient(90deg, rgb(82, 255, 186) 0 1px, transparent 1px 13vw),
+        repeating-linear-gradient(90deg, #444, white 9vw, white 13vw, #999 13vw, white 31vw),
+        repeating-linear-gradient(white 0 7vw, #1428a0 7vw 10vw, #ccc 10vw 16vw, white 16vw 21vw, rgb(82, 255, 186), #1428a0 21.5vw 27vw);
+    background-blend-mode: normal, normal, multiply, normal;
+}
+
+.crazy::after {
+    background-image:
+        repeating-linear-gradient(transparent 0 3.4vw, white 3.4vw 3.9vw),
+        repeating-linear-gradient(90deg, transparent 0 17vw, white 17vw 17.6vw, transparent 17.6vw 23vw);
+    pointer-events: none;
+}
+
+.labels {
+    z-index: 1;
+    margin: -4vw 0;
+    font-size: 2.5vw;
+    font-weight: normal;
+}
+
+.labels b {
+    background: rgb(255, 87, 87);
+    color: antiquewhite;
+    padding: 0 0.3em;
+}
+
+.labels b:nth-child(even) {
+    font-size: 2.6em;
+}
+
+.labels b:nth-child(3n) {
+    background: orange;
+    color: rgb(0, 111, 89);
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+.labels b:nth-child(3n + 1) {
+    animation: flash 1.3s steps(1) infinite;
+}
+
+.crazy p:nth-child(6n) {
+    transform: scaleY(-1);
+}
+
+.crazy p:nth-child(6n + 4) {
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.crazy::before {
+    animation: panels 14s linear infinite;
+}
+
+.crazy::after {
+    animation: cuts 5s linear infinite;
+}
+
+@keyframes panels {
+    to {
+        background-position: 0 9vw, 13vw 0, 31vw 0, 0 27vw;
+    }
+}
+
+@keyframes cuts {
+    to {
+        background-position: 0 3.9vw, 23vw 0;
+    }
+}
+
+@keyframes flash {
+    50% {
+        background: rgb(82, 255, 186);
+    }
+}
+
+body>p:hover {
+    background: fuchsia;
+    color: aquamarine;
+    transform: skewX(-15deg);
+}
+
+.crazy p:not(.labels):hover {
+    filter: none;
+    color: rgb(82, 255, 186);
+    mix-blend-mode: normal;
+    transform: scale(1.08);
+}
+
+p:hover+p {
+    transform: translateX(6vw);
+}
+
+p:has(+ p:hover) {
+    transform: translateX(-6vw);
+}
+
+.labels b {
+    display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
