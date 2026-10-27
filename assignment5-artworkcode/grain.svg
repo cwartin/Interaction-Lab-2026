@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160">
+  <!-- Random noise, used as a faint pigment grain over the blue tiles -->
+  <filter id="n">
+    <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2"/>
+  </filter>
+  <rect width="100%" height="100%" filter="url(#n)" opacity=".12"/>
+</svg>

@@ -1,0 +1,212 @@
+
+:root { 
+    padding: 0 !important; 
+    color-scheme: light;
+ }
+body { 
+    margin: 0; 
+    background: #fbfbfa; 
+}
+
+p{
+  font-family: Helvetica;
+  font-weight: 200;
+}
+
+.track { height: 700vh; 
+}
+
+.art { position: sticky; 
+    top: 0; width: 100%; 
+    height: 100vh; 
+    overflow: hidden;
+ }
+
+.tile:nth-child(6n+1) { 
+    --c: 0; 
+}
+.tile:nth-child(6n+2) {
+     --c: 1;
+ }
+.tile:nth-child(6n+3) { 
+    --c: 2;
+ }
+.tile:nth-child(6n+4) {
+     --c: 3; 
+ }
+.tile:nth-child(6n+5) { 
+    --c: 4;
+ }
+.tile:nth-child(6n+6) { 
+    --c: 5; 
+}
+
+.tile { 
+    --r: 0; 
+    --ring: 0;
+    --half: 0;
+     --q: 0; 
+     --side: -1; 
+    }
+.tile:nth-child(n+7)  { 
+    --r: 1;
+     --ring: 0; 
+     --half: 1; 
+     --q: 1; 
+    }
+.tile:nth-child(n+13) {
+     --r: 2; 
+     --ring: 1; 
+     --half: 0; 
+     --q: 2; 
+    }
+.tile:nth-child(n+19) { 
+    --r: 3;
+    --ring: 1; 
+    --half: 1; 
+    --q: 3; 
+}
+.tile:nth-child(n+25) { 
+    --r: 4; 
+    --ring: 2; 
+    --half: 0; 
+    --q: 0;
+     --side: 1; 
+    }
+.tile:nth-child(n+31) { 
+    --r: 5; 
+    --ring: 2; 
+    --half: 1; 
+    --q: 1; 
+}
+.tile:nth-child(n+37) { 
+    --r: 6; 
+    --ring: 3; 
+    --half: 0; 
+    --q: 2; 
+}
+.tile:nth-child(n+43) { 
+    --r: 7; 
+    --ring: 3; 
+    --half: 1; 
+    --q: 3; 
+}
+
+.tile {
+  --i: calc(var(--r) * 6 + var(--c));             
+  --rnd: sin(calc(var(--i) * 77deg + 13deg));      
+
+  --gx: calc((var(--c) + 0.5) * 100vw / 6 - 50vw);
+  --gy: calc((var(--r) + 0.5) * 100vh / 8 - 50vh);
+  --gw: calc(100vw / 6 + 1px);                    
+  --gh: calc(100vh / 8 + 1px);
+  --k: calc(var(--i) + 1);
+  --sa: calc(var(--k) * 137.508deg);
+  --sr: calc(sqrt(var(--k) / 48) * 42vmin);
+  --ss: calc(6vmin * (1.25 - var(--k) / 48 * 0.75));
+  --ra: calc((var(--half) * 6 + var(--c)) * 30deg + var(--ring) * 15deg);
+  --rr: calc(14vmin + var(--ring) * 9.5vmin);
+  --rs: calc(5vmin + var(--ring) * 1.4vmin);
+
+  --bk: calc(var(--q) * 6 + var(--c));
+  --bw: calc(100vw / 24);
+  --wave: sin(calc(var(--bk) * 21deg + 20deg));
+  --bh: calc(38vmin * (0.25 + 0.75 * var(--wave) * var(--wave)));
+
+  --blue: rgb(0 47 167);
+  --blue-shaded: rgb(calc(max(0, var(--rnd)) * 14) calc(47 + var(--rnd) * 22) calc(167 + var(--rnd) * 35));
+}
+
+.tile {
+  position: absolute; left: 50%; top: 50%;
+  translate: calc(var(--gx) - 50%) calc(var(--gy) - 50%);
+  width: var(--gw); height: var(--gh);
+  background-color: var(--blue);
+  background-image: url("grain.svg");
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@supports (animation-timeline: scroll()) {
+  .tile {
+    animation: unfold linear both;
+    animation-timeline: scroll(root);
+    animation-timing-function: ease-in-out;         
+  }
+}
+
+@keyframes unfold {
+  /* I. Solid */
+  0%, 4%, 96%, 100% {
+    translate: calc(var(--gx) - 50%) calc(var(--gy) - 50%);
+    width: var(--gw); height: var(--gh);
+    rotate: 0deg; border-radius: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background-color: var(--blue);
+  }
+
+  16%, 24% {
+    translate: calc(var(--gx) - 50%) calc(var(--gy) - 50%);
+    width: calc(var(--gw) * 0.75); height: calc(var(--gh) * 0.75);
+    rotate: calc(var(--rnd) * 35deg); border-radius: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background-color: var(--blue-shaded);
+  }
+
+  36%, 44% {
+    translate: calc(cos(var(--sa)) * var(--sr) - 50%) calc(sin(var(--sa)) * var(--sr) - 50%);
+    width: var(--ss); height: var(--ss);
+    rotate: 0deg; border-radius: 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background-color: var(--blue-shaded);
+  }
+
+  56%, 64% {
+    translate: calc(cos(var(--ra)) * var(--rr) - 50%) calc(sin(var(--ra)) * var(--rr) - 50%);
+    width: var(--rs); height: var(--rs);
+    rotate: calc(var(--ra) + 90deg); border-radius: 0;
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
+    background-color: var(--blue-shaded);
+  }
+
+  76%, 84% {
+    translate: calc((var(--bk) + 0.5) * var(--bw) - 50vw - 50%)
+               calc(var(--side) * (var(--bh) / 2 + 3px) - 50%);
+    width: calc(var(--bw) * 0.45); height: var(--bh);
+    rotate: 0deg; border-radius: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background-color: var(--blue-shaded);
+  }
+}
+
+/* ---------- Caption, fixed to the bottom-left corner ---------- */
+.caption {
+  position: fixed;
+  left: max(24px, env(safe-area-inset-left, 0px));
+  bottom: max(24px, env(safe-area-inset-bottom, 0px));
+  z-index: 10;                     /* sits above the tiles */
+  margin: 0;
+  max-width: 30ch;
+  display: grid;
+  gap: 2px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.35;
+  color: antiquewhite;             /* starts on top of the blue */
+  pointer-events: none;            /* scrolling and clicks pass through */
+}
+.caption strong { font-size: 16px; letter-spacing: -0.01em; }
+.caption .about { margin-top: 8px; opacity: 0.85; }
+
+/* The text colour follows the same scroll as the tiles:
+   antique white while the corner is blue, black while it's the pale wall */
+@supports (animation-timeline: scroll()) {
+  .caption {
+    animation: caption-colour linear both;
+    animation-timeline: scroll(root);
+  }
+}
+@keyframes caption-colour {
+  0%, 26%   { color: antiquewhite; }   /* solid blue and fracture */
+  32%, 88%  { color: #111; }           /* circles, triangles, bars */
+  94%, 100% { color: antiquewhite; }   /* back to solid blue */
+}
