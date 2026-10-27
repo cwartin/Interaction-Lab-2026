@@ -1,18 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <title>Calista Wartin Core 1: Interaction Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #f1f7ff;
+            --ink: #111111;
+            --line: 2px;
+            --size: clamp(1.4rem, 4.2vw, 3.4rem);
+        }
+
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4vw 16px;
+        }
+
+        main {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(0.6rem, 1.6vw, 1.2rem);
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: clamp(0.4rem, 1.2vw, 1rem);
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            border: var(--line) solid var(--ink);
+            border-radius: 999px;
+            padding: 0.08em 0.45em 0.12em;
+            font-size: var(--size);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .pill .num {
+            font-size: 0.45em;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-right: 0.6em;
+            opacity: 0.75;
+        }
+
+        a.pill:hover,
+        a.pill:focus-visible {
+            background: var(--ink);
+            color: var(--paper);
+            outline: none;
+        }
+
+        .pill.title { font-weight: 500; }
+
+        .arrow {
+            width: calc(var(--size) * 1.05);
+            height: calc(var(--size) * 1.05);
+            flex: none;
+            border: var(--line) solid var(--ink);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .arrow svg {
+            width: 55%;
+            height: 55%;
+            stroke: var(--ink);
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .up    svg { transform: rotate(-90deg); }
+        .down  svg { transform: rotate(90deg); }
+        .left  svg { transform: rotate(180deg); }
+
+        .row:has(a.pill:hover) .arrow { transform: rotate(90deg); }
+
+        @media (max-width: 600px) {
+            :root { --size: 1.5rem; }
+            .row { gap: 0.5rem; }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Hello World! </h1>
-    <script src="" async defer></script>
+    <svg width="0" height="0" style="position:absolute">
+        <symbol id="arr" viewBox="0 0 24 24">
+            <path d="M4 12h16M13 5l7 7-7 7" />
+        </symbol>
+    </svg>
+
+    <main>
+        <div class="row">
+            <span class="pill title">Assignments</span>
+            <span class="arrow down"><svg><use href="#arr"/></svg></span>
+        </div>
+
+        <div class="row">
+            <span class="arrow up"><svg><use href="#arr"/></svg></span>
+            <a class="pill" href="assignment1.html"><span class="num">Assignment 1</span>Walk</a>
+            <span class="arrow left"><svg><use href="#arr"/></svg></span>
+        </div>
+
+        <div class="row">
+            <a class="pill" href="assignment2.html"><span class="num">Assignment 2</span>Interview</a>
+            <span class="arrow right"><svg><use href="#arr"/></svg></span>
+        </div>
+
+        <div class="row">
+            <span class="arrow right"><svg><use href="#arr"/></svg></span>
+            <a class="pill" href="assignment3.html"><span class="num">Assignment 3</span>Instructions</a>
+        </div>
+
+        <div class="row">
+            <span class="arrow up"><svg><use href="#arr"/></svg></span>
+            <a class="pill" href="assignment4.html"><span class="num">Assignment 4</span>VisualOnly</a>
+            <span class="arrow left"><svg><use href="#arr"/></svg></span>
+        </div>
+
+        <div class="row">
+            <a class="pill" href="assignment5.html"><span class="num">Assignment 5</span>CodingArtwork</a>
+            <span class="arrow right"><svg><use href="#arr"/></svg></span>
+        </div>
+    </main>
 </body>
 
 </html>
