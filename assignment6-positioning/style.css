@@ -1,0 +1,200 @@
+@font-face {
+      font-family: 'GYSPixels-Regular';
+      src: url('GYSPixels-Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+@font-face {
+      font-family: 'GYSPixels-Light';
+      src: url('GYSPixels-Light.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+ body {
+      display: grid;
+      justify-items: center;
+      padding: 40px 16px;
+       background-color: #1E1E1E;
+        color:#76FFB4;
+    }
+.page {
+      width: 100%;            
+      min-height: 100vh;      
+      padding: 24px 5vw 80px;  
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto 1fr;
+      row-gap: 20px;
+      align-content: start;
+    }
+.home {
+      grid-row: 1;
+      font-family: "GysPixels-Regular", sans-serif;
+      font-weight: 300;
+      font-size: 22px;
+      text-decoration: none;
+      color:#76FFB4;
+    }
+.title {
+      grid-row: 2;
+      display: grid;
+      grid-template-columns: 1fr auto;   
+      grid-template-rows: repeat(3, auto);
+      column-gap: 0.4em;
+      font-family: 'GYSPixels-Regular', sans-serif;
+      font-weight: 400;
+      font-size: clamp(36px, 9vw, 260px);
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+.t-music    { 
+    grid-column: 1; 
+    grid-row: 1;
+ }
+.t-i        { 
+        grid-column: 2; 
+        grid-row: 1; 
+        justify-self: end; 
+    }
+.t-consumed { 
+    grid-column: 1; 
+    grid-row: 2; 
+}
+.t-this     { 
+    grid-column: 2; 
+    grid-row: 2; 
+    justify-self: end; 
+}
+.t-past{ 
+    grid-column: 1 / -1; 
+    grid-row: 3; 
+}  
+ .subtitle {
+    font-family: "Astra Sans", sans-serif;
+    font-size: 20%;
+      grid-row: 3;
+      margin-top: 12px;
+      font-size: 30px;
+      letter-spacing: -0.02em;
+    }
+
+.list {
+      grid-row: 4;
+      list-style: none;
+      margin-top: 8px;
+      border-top: 1px solid #76FFB4;     
+      display: grid;
+      align-content: start;
+}
+.item {
+      display: grid;
+      grid-template-columns: 50px 1fr minmax(120px, 20%);
+      grid-template-rows: auto auto;
+      column-gap: 16px;
+      row-gap: 6px;
+      padding: 20px 0;
+      min-height: 90px;
+      border-bottom: 1px solid #76FFB4;  
+    }
+.rank {
+    font-family:"Astra Sans", sans-serif;
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      align-self: start;
+      font-size: 30px;
+    }
+
+    .genre {
+    font-family:"gysPixels-Regular", sans-serif;
+      grid-column: 2;
+      grid-row: 1;
+      align-self: end;
+      font-size:15px;
+      font-weight: 500;
+    }
+
+    .song {
+      grid-column: 2;
+      grid-row: 2;
+      font-family: "GysPixels-Regular", sans-serif;
+      font-size: 36px;
+    }
+
+    .artist {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+      align-self: end;        
+      text-align: right;
+      font-family: "GysPixels-Light", sans-serif;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+ .platform {
+    font-family:"GysPixels-Light", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+  @media (max-width: 520px) {
+      .item { grid-template-columns: 34px 1fr 90px; column-gap: 10px; }
+      .song { font-size: 16px; }
+      .artist { font-size: 15px; }
+  }
+
+
+.list {
+  margin-left: -5vw;   
+  margin-right: -5vw;   
+}
+
+.item {
+  padding-left: 5vw;    
+  padding-right: 5vw;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.item:hover {
+  background-color: #76FFB4;  
+}
+
+.item:hover > * {
+  color: #000000;               
+}
+
+.artist {
+  position: relative;   
+  overflow: hidden;     
+}
+.artist-name,
+    .platform {
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+.platform {
+      position: absolute;
+      inset: 0;                       
+      display: flex;
+      align-items: flex-end;            
+      justify-content: flex-end;
+      transform: translateY(-100%);    
+    }
+
+    .item:hover .artist-name {
+      transform: translateY(100%);      
+    }
+
+    .item:hover .platform {
+      transform: translateY(0);        
+    }
